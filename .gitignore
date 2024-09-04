@@ -1,0 +1,11 @@
+# Ignore node_modules in all directories
+node_modules/
+server/node_modules/
+client/node_modules/
+
+
+# Ignore .env file in the server directory
+server/.env
+
+# Ignore .env files in all directories (optional if you only want to ignore in the server directory)
+*.env

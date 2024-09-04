@@ -66,12 +66,12 @@ export default function Form() {
             onChange={(e) => setAge(e.target.value)}
           />
         </label>
-        <button type="submit">Submit</button>
+        <button onClick={handleSubmit} type="submit">Submit</button>
       </form>
       <di>
         <h2>See Your People</h2>
         <p>Click the button to see a list of all submitted people</p>
-        <button>See People</button>
+        <button onClick={handleClick}>See People</button>
       </di>
     </div>
   );

@@ -12,10 +12,10 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/people", {
-        fname,
-        lname,
-        age,
+      const res = await axios.post("http://localhost:8080/api/submit", {
+        firstName: fname,
+        lastName: lname,
+        age: age,
       });
       console.log(res);
       setFname("");
@@ -66,13 +66,15 @@ export default function Form() {
             onChange={(e) => setAge(e.target.value)}
           />
         </label>
-        <button onClick={handleSubmit} type="submit">Submit</button>
+        <button onClick={handleSubmit} type="submit">
+          Submit
+        </button>
       </form>
-      <di>
+      <div>
         <h2>See Your People</h2>
         <p>Click the button to see a list of all submitted people</p>
         <button onClick={handleClick}>See People</button>
-      </di>
+      </div>
     </div>
   );
 }
